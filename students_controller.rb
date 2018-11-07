@@ -12,7 +12,7 @@ end
 
 # new
 get '/students/new' do
-  @houses = ['gryffindor', 'hufflepuff', 'ravenclaw', 'slytherin']
+  @houses = House.all()
   erb(:new)
 end
 
@@ -30,7 +30,7 @@ end
 
 #edit
 get '/students/:id/edit' do
-    @houses = ['gryffindor', 'hufflepuff', 'ravenclaw', 'slytherin']
+    @houses = House.all 
     @student = Student.find(params[:id])
     erb(:edit)
 end
