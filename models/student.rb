@@ -34,7 +34,7 @@ class Student
 
   def house()
     house = House.find(@house_id)
-    return house.name.capitalize
+    return house.name
   end
 
   def update()
